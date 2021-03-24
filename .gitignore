@@ -1,0 +1,29 @@
+# Maven
+target/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Eclipse
+/.classpath
+/.settings/
+/.project
+/bin/
+
+# IntelliJ
+.idea
+*.iml
+*.ipr
+*.iws
+
+#VSCode
+.vscode
+*.code-workspace
+
+# Maven
+.mvn
+mvnw*
+pom*.xml
+
+# Misc
+*.log
