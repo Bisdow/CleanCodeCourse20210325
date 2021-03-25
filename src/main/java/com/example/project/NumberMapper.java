@@ -26,7 +26,7 @@ public class NumberMapper {
 		if (toType.equals("Hexadecimal")) {
 			return mapToHexaDecimal(numberToMap);
 		}
-		
+
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
 	}
 
