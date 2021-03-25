@@ -42,3 +42,5 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - IF-Statements in eigene Methoden auslagern und dadurch mit einem sprechenden Namen versehen
  - Methodenaufrufe mit Parametern hinter extra Methoden verstecken (und darin mit fixem Parameter aufrufen) (mapToBinary(input) => maptoBase(input,2))
  - Fixwerte als Konstanten ablegen (Magic Values benennen)
+ - Aufteilen von Code in eigene Dateien / Klassen um den Code übersichtlicher zu machen und zu strukturieren.
+ - Klassen sollten im allgemeinen Abstract oder Final sein => Das zeigt dem nächsten Entwickler wie er mit der Klasse umgehen muss.

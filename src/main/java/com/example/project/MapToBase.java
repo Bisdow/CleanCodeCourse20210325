@@ -1,9 +1,9 @@
 package com.example.project;
 
-public class MapToBase {
+public abstract class MapToBase {
 
     	// maps an integer into a String in any numberToMap format with the base provided
-	public String mapToBase(int numberToMap, int base) {
+	protected String mapToBase(int numberToMap, int base) {
 		String result = "";
 
 		int counter = 0;
