@@ -46,3 +46,10 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - Klassen sollten im allgemeinen Abstract oder Final sein => Das zeigt dem nächsten Entwickler wie er mit der Klasse umgehen muss.
  - Konstanten auch als solche kennzeichnen (const / final / ...), eventuell auch bei Input-Parametern wo inhaltlich/fachlich sinnvoll.
  - Haltet die Anzahl der Input-Parameter von Methoden so gering wie möglich
+
+
+Allgmeines Vorgehen
+in kleinen Iterationen =>
+Make it WORK  -> Focus auf Funktionalität
+Make it NICE  -> Focus auf Verständlichkeit / Struktur / Schönheit
+Make it FAST  -> Focus auf Performance

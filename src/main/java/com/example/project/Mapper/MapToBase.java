@@ -1,4 +1,4 @@
-package com.example.project;
+package com.example.project.Mapper;
 
 public abstract class MapToBase implements Mapable {
 

@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.project.Mapper.NumberMapperFactory;
+
 @DisplayName("AcceptanceTest => General Error Handling")
 class AcceptanceGeneralErrorHandlingTest {
 	private NumberMapper underTest;
@@ -17,7 +19,7 @@ class AcceptanceGeneralErrorHandlingTest {
 
 	@Test
 	void callWithUnkownTarget() {
-		String expected = ERRORCODE.UNKNOWN_TARGET.toString();
+		String expected = NumberMapperFactory.UNKNOWN_TARGET;
 
 		String actual = underTest.mapTo(10, "UnknownTarget");
 		assertEquals(expected, actual);
@@ -27,7 +29,7 @@ class AcceptanceGeneralErrorHandlingTest {
 	void callWithMissingParams() {
 		String expected = ERRORCODE.NEGATIVE_NUMBER.toString();
 
-		String actual = underTest.mapTo(-1, NumberMapper.roman);
+		String actual = underTest.mapTo(-1, NumberMapperFactory.roman);
 		assertEquals(expected, actual);
 	}
 }

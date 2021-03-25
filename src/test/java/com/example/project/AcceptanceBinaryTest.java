@@ -6,12 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.project.Mapper.NumberMapperFactory;
+
 @DisplayName("AcceptanceTest => Map Integer to Binary")
 class AcceptanceBinaryTest {
 	private NumberMapper underTest;
 
 	private void executeTest(int input, String expected) {
-		String actual = underTest.mapTo(input, NumberMapper.binary);
+		String actual = underTest.mapTo(input, NumberMapperFactory.binary);
 		String errorMessage = input + " should be " + expected + " but was " + actual;
 		assertEquals(expected, actual, errorMessage);
 	}

@@ -6,13 +6,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.project.Mapper.NumberMapperFactory;
+
 @DisplayName("AcceptanceTest => Map Integer to Hexadecimal")
 class AcceptanceHexadecimalTest {
 
 	private NumberMapper underTest;
 
 	private void executeTest(int input, String expected) {
-		String actual = underTest.mapTo(input, NumberMapper.hexadecimal);
+		String actual = underTest.mapTo(input, NumberMapperFactory.hexadecimal);
 		String errorMessage = input + " should be " + expected + " but was " + actual;
 		assertEquals(expected, actual, errorMessage);
 	}

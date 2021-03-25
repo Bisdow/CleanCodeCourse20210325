@@ -1,4 +1,4 @@
-package com.example.project;
+package com.example.project.Mapper;
 
 public class BinaryMapper extends MapToBase { 
     public String mapTo(int numberToMap) {

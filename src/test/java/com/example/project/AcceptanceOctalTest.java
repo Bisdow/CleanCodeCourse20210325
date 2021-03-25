@@ -6,12 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.project.Mapper.NumberMapperFactory;
+
 @DisplayName("AcceptanceTest => Map Integer to Octal")
 class AcceptanceOctalTest {
 	private NumberMapper underTest;
 
 	private void executeTest(int input, String expected) {
-		String actual = underTest.mapTo(input, NumberMapper.octal);
+		String actual = underTest.mapTo(input, NumberMapperFactory.octal);
 		String errorMessage = input + " should be " + expected + " but was " + actual;
 		assertEquals(expected, actual, errorMessage);
 	}
