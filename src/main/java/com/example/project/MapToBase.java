@@ -1,6 +1,6 @@
 package com.example.project;
 
-public abstract class MapToBase {
+public abstract class MapToBase implements Mapable {
 
     	// maps an integer into a String in any numberToMap format with the base provided
 	protected String mapToBase(int numberToMap, final int base) {
