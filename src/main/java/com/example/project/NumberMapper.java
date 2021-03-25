@@ -7,11 +7,6 @@ public class NumberMapper {
 	public final static String hexadecimal = "Hexadecimal";
 
 
-	public static void main(String[] args) {
-		NumberMapper mapper = new NumberMapper();
-		System.out.println(mapper.mapTo(Integer.parseInt(args[0]), args[1]));
-	}
-
 	public String mapTo(int numberToMap, String toType) {
 		try{
 			validate(numberToMap, toType);
