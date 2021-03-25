@@ -37,26 +37,18 @@ public class NumberMapper {
 			return romanNumberMapper.mapTo(numberToMap);
 		}
 		if (toType.equals(binary)) {
-			return mapToBinary(numberToMap);
+			BinaryMapper binaryMapper = new BinaryMapper();
+			return binaryMapper.mapTo(numberToMap);
 		}
 		if ((toType.equalsIgnoreCase(octal))) {
-			return mapToOctal(numberToMap);
+			OctalMapper octalMapper = new OctalMapper();
+			return octalMapper.mapTo(numberToMap);
 		}
 		if (toType.equals(hexadecimal)) {
 			HexaDecimalMapper hexaDecimalMapper = new HexaDecimalMapper();
 			return hexaDecimalMapper.mapTo(numberToMap);
 		}
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
-	}
-
-	private String mapToBinary(int numberToMap) {
-		BinaryMapper binaryMapper = new BinaryMapper();
-		return binaryMapper.mapTo(numberToMap);
-	}
-
-	private String mapToOctal(int numberToMap) {
-		OctalMapper octalMapper = new OctalMapper();
-		return octalMapper.mapTo(numberToMap);
 	}
 
 	private boolean isNegative(int numberToMap) {
@@ -67,6 +59,4 @@ public class NumberMapper {
 		return !toType.equals(roman) && !toType.equals(binary) && !toType.equals(octal)
 		&& !toType.equals(hexadecimal);
 	}
-
-
 }

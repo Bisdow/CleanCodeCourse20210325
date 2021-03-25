@@ -1,6 +1,6 @@
 package com.example.project;
 
-public class HexaDecimalMapper {
+public class HexaDecimalMapper implements Mapable {
 
     // maps an integer input into a String in the Hexadecimal numbersystem
 	public String mapTo(int numberToMap) {

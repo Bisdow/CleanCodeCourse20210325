@@ -1,6 +1,6 @@
 package com.example.project;
 
-public class RomanNumberMapper {
+public class RomanNumberMapper implements Mapable {
     	// maps an integer into a String in the Roman numberToMap format
 	public String mapTo(int numberToMap) {
 		String result = "";
