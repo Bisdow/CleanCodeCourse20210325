@@ -3,7 +3,7 @@ package com.example.project;
 public abstract class MapToBase {
 
     	// maps an integer into a String in any numberToMap format with the base provided
-	protected String mapToBase(int numberToMap, int base) {
+	protected String mapToBase(int numberToMap, final int base) {
 		String result = "";
 
 		int counter = 0;

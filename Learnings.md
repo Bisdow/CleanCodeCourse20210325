@@ -44,3 +44,5 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - Fixwerte als Konstanten ablegen (Magic Values benennen)
  - Aufteilen von Code in eigene Dateien / Klassen um den Code übersichtlicher zu machen und zu strukturieren.
  - Klassen sollten im allgemeinen Abstract oder Final sein => Das zeigt dem nächsten Entwickler wie er mit der Klasse umgehen muss.
+ - Konstanten auch als solche kennzeichnen (const / final / ...), eventuell auch bei Input-Parametern wo inhaltlich/fachlich sinnvoll.
+ - Haltet die Anzahl der Input-Parameter von Methoden so gering wie möglich
