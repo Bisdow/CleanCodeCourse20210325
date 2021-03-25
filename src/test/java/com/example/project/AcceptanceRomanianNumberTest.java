@@ -11,7 +11,7 @@ class AcceptanceRomanianNumberTest {
 	private NumberMapper underTest;
 
 	private void executeTest(int input, String expected) {
-		String actual = underTest.mapTo(input, "Romanian");
+		String actual = underTest.mapTo(input, NumberMapper.roman);
 		String errorMessage = input + " should be " + expected + " but was " + actual;
 		assertEquals(expected, actual, errorMessage);
 	}

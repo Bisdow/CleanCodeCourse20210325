@@ -27,7 +27,7 @@ class AcceptanceGeneralErrorHandlingTest {
 	void callWithMissingParams() {
 		String expected = ERRORCODE.NEGATIVE_NUMBER.toString();
 
-		String actual = underTest.mapTo(-1, "Romanian");
+		String actual = underTest.mapTo(-1, NumberMapper.roman);
 		assertEquals(expected, actual);
 	}
 }

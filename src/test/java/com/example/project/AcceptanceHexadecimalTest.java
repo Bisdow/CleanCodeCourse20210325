@@ -12,7 +12,7 @@ class AcceptanceHexadecimalTest {
 	private NumberMapper underTest;
 
 	private void executeTest(int input, String expected) {
-		String actual = underTest.mapTo(input, "Hexadecimal");
+		String actual = underTest.mapTo(input, NumberMapper.hexadecimal);
 		String errorMessage = input + " should be " + expected + " but was " + actual;
 		assertEquals(expected, actual, errorMessage);
 	}

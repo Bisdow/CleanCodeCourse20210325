@@ -1,6 +1,12 @@
 package com.example.project;
 public class NumberMapper {
 
+	public final static String roman = "Roman";
+	public final static String binary = "Binary";
+	public final static String octal = "Octal";
+	public final static String hexadecimal = "Hexadecimal";
+
+
 	public static void main(String[] args) {
 		NumberMapper mapper = new NumberMapper();
 		System.out.println(mapper.mapTo(Integer.parseInt(args[0]), args[1]));
@@ -14,16 +20,16 @@ public class NumberMapper {
 			return ERRORCODE.NEGATIVE_NUMBER.toString();
 		}
 
-		if (toType.equalsIgnoreCase("Romanian")) {
-			return mapToRomanianNumber(numberToMap);
+		if (toType.equalsIgnoreCase(roman)) {
+			return mapToRomanNumber(numberToMap);
 		}
-		if (toType.equals("Binary")) {
+		if (toType.equals(binary)) {
 			return mapToBinary(numberToMap);
 		}
-		if ((toType.equalsIgnoreCase("Octal"))) {
+		if ((toType.equalsIgnoreCase(octal))) {
 			return mapToOctal(numberToMap);
 		}
-		if (toType.equals("Hexadecimal")) {
+		if (toType.equals(hexadecimal)) {
 			return mapToHexaDecimal(numberToMap);
 		}
 
@@ -43,12 +49,12 @@ public class NumberMapper {
 	}
 
 	private boolean validateToType(String toType) {
-		return !toType.equals("Romanian") && !toType.equals("Binary") && !toType.equals("Octal")
-		&& !toType.equals("Hexadecimal");
+		return !toType.equals(roman) && !toType.equals(binary) && !toType.equals(octal)
+		&& !toType.equals(hexadecimal);
 	}
 
-	// maps an integer into a String in the Romaniam numberToMap format
-	private String mapToRomanianNumber(int numberToMap) {
+	// maps an integer into a String in the Roman numberToMap format
+	private String mapToRomanNumber(int numberToMap) {
 		String result = "";
 
 		if (numberToMap == 0) {
