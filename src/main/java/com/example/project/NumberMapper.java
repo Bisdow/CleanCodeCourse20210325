@@ -1,34 +1,6 @@
 package com.example.project;
-
-import java.util.TreeMap;
-import java.util.Map;
-import java.lang.Integer;
-
 public class NumberMapper {
 
-	final private static TreeMap<Integer, String> sortedNumberToRomanian = new TreeMap<>();
-
-	static {
-		sortedNumberToRomanian.put(1000, "M");
-		sortedNumberToRomanian.put(999, "IM");
-		sortedNumberToRomanian.put(990, "XM");
-		sortedNumberToRomanian.put(900, "CM");
-		sortedNumberToRomanian.put(500, "D");
-		sortedNumberToRomanian.put(499, "ID");
-		sortedNumberToRomanian.put(490, "XD");
-		sortedNumberToRomanian.put(400, "CD");
-		sortedNumberToRomanian.put(100, "C");
-		sortedNumberToRomanian.put(99, "IC");
-		sortedNumberToRomanian.put(90, "XC");
-		sortedNumberToRomanian.put(50, "L");
-		sortedNumberToRomanian.put(49, "IL");
-		sortedNumberToRomanian.put(40, "XL");
-		sortedNumberToRomanian.put(10, "X");
-		sortedNumberToRomanian.put(9, "IX");
-		sortedNumberToRomanian.put(5, "V");
-		sortedNumberToRomanian.put(4, "IV");
-		sortedNumberToRomanian.put(1, "I");
-	}
 	public static void main(String[] args) {
 		NumberMapper mapper = new NumberMapper();
 		System.out.println(mapper.mapTo(Integer.parseInt(args[0]), args[1]));
