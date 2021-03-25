@@ -18,16 +18,24 @@ public class NumberMapper {
 			return mapToRomanianNumber(numberToMap);
 		}
 		if (toType.equals("Binary")) {
-			return mapToBase(numberToMap, 2);
+			return mapToBinary(numberToMap);
 		}
 		if ((toType.equalsIgnoreCase("Octal"))) {
-			return mapToBase(numberToMap, 8);
+			return mapToOctal(numberToMap);
 		}
 		if (toType.equals("Hexadecimal")) {
 			return mapToHexaDecimal(numberToMap);
 		}
 
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
+	}
+
+	private String mapToBinary(int numberToMap) {
+		return mapToBase(numberToMap, 2);
+	}
+
+	private String mapToOctal(int numberToMap) {
+		return mapToBase(numberToMap, 8);
 	}
 
 	private boolean isNegative(int numberToMap) {

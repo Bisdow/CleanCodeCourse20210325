@@ -39,3 +39,6 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - Pure Functions (Funktionen die NUR von dein Eingabeparametern abhängig sind und NUR einen Wert zurückliefern und sonst nichts ändern), nicht abhängig von globalen Variablen
  - Accessability Modifer (Public/Private/...) so restriktiv wie möglich und möglichst explizit (kein Default)
  - YAGNI - You aint gonna need it -> Nicht auf "Verdacht" implementieren, nur wenn echter Bedarf da ist
+ - IF-Statements in eigene Methoden auslagern und dadurch mit einem sprechenden Namen versehen
+ - Methodenaufrufe mit Parametern hinter extra Methoden verstecken (und darin mit fixem Parameter aufrufen) (mapToBinary(input) => maptoBase(input,2))
+ - Fixwerte als Konstanten ablegen (Magic Values benennen)
