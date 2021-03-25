@@ -34,7 +34,7 @@ public class NumberMapper {
 	private String doMapping(int numberToMap, String toType){
 		if (toType.equalsIgnoreCase(roman)) {
 			RomanNumberMapper romanNumberMapper = new RomanNumberMapper();
-			return romanNumberMapper.mapToRomanNumber(numberToMap);
+			return romanNumberMapper.mapTo(numberToMap);
 		}
 		if (toType.equals(binary)) {
 			return mapToBinary(numberToMap);
@@ -44,19 +44,19 @@ public class NumberMapper {
 		}
 		if (toType.equals(hexadecimal)) {
 			HexaDecimalMapper hexaDecimalMapper = new HexaDecimalMapper();
-			return hexaDecimalMapper.mapToHexaDecimal(numberToMap);
+			return hexaDecimalMapper.mapTo(numberToMap);
 		}
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
 	}
 
 	private String mapToBinary(int numberToMap) {
-		MapToBinary binaryMapper = new MapToBinary();
-		return binaryMapper.mapToBinary(numberToMap);
+		BinaryMapper binaryMapper = new BinaryMapper();
+		return binaryMapper.mapTo(numberToMap);
 	}
 
 	private String mapToOctal(int numberToMap) {
-		MapToOctal octalMapper = new MapToOctal();
-		return octalMapper.mapToOctal(numberToMap);
+		OctalMapper octalMapper = new OctalMapper();
+		return octalMapper.mapTo(numberToMap);
 	}
 
 	private boolean isNegative(int numberToMap) {
@@ -69,3 +69,4 @@ public class NumberMapper {
 	}
 
 
+}

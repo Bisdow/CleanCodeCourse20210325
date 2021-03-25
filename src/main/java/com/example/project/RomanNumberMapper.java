@@ -2,7 +2,7 @@ package com.example.project;
 
 public class RomanNumberMapper {
     	// maps an integer into a String in the Roman numberToMap format
-	public String mapToRomanNumber(int numberToMap) {
+	public String mapTo(int numberToMap) {
 		String result = "";
 
 		if (numberToMap == 0) {

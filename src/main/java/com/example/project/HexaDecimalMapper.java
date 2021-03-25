@@ -3,7 +3,7 @@ package com.example.project;
 public class HexaDecimalMapper {
 
     // maps an integer input into a String in the Hexadecimal numbersystem
-	public String mapToHexaDecimal(int numberToMap) {
+	public String mapTo(int numberToMap) {
 		// Handle Zero value
 		if (numberToMap == 0) {
 			return "0";
