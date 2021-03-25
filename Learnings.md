@@ -33,4 +33,5 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - Kommentare -> immer erst prüfen ob der CODE Verständlicher werden kann und nur im Notfall einen Kommentar dazu
  - Egal welchen Stil man gewählt hat, bleibt konsistent
  - Variablen / Methoden typisieren
- - Higher Level Functions => Funktion die Funkionen aufruf/managed, aber keinen/kaum eigenen Code
+ - Struktur Higher Level Functions => Funktion die Funkionen aufruf/managed, aber keinen/kaum eigenen Code -> Code in verschiedene Abstraktionsebenen unterteilen - Single Responsibility Principle
+ - DRY - Do not repeat yourself
