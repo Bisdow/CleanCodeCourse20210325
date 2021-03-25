@@ -6,40 +6,34 @@ public class NumberMapper {
 		System.out.println(mapper.mapTo(Integer.parseInt(args[0]), args[1]));
 	}
 
-	int numberToMap;
-	String result;
-
-	public String mapTo(int input, String toType) {
+	public String mapTo(int numberToMap, String toType) {
 		if (!toType.equals("Romanian") && !toType.equals("Binary") && !toType.equals("Octal")
 				&& !toType.equals("Hexadecimal")) {
 			return ERRORCODE.UNKNOWN_TARGET.toString();
 		}
-		if (input < 0) {
+		if (numberToMap < 0) {
 			return ERRORCODE.NEGATIVE_NUMBER.toString();
 		}
 		if (toType.equalsIgnoreCase("Romanian")) {
-			return mapToRomanianNumber(input);
+			return mapToRomanianNumber(numberToMap);
 		}
 		if (toType.equals("Binary")) {
-			return mapToBase(input, 2);
+			return mapToBase(numberToMap, 2);
 		}
 		if ((toType.equalsIgnoreCase("Octal"))) {
-			return mapToBase(input, 8);
+			return mapToBase(numberToMap, 8);
 		}
 		if (toType.equals("Hexadecimal")) {
-			return mapToHexaDecimal(input);
+			return mapToHexaDecimal(numberToMap);
 		}
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
 	}
 
 	// maps an integer into a String in the Romaniam numberToMap format
-	String mapToRomanianNumber(int input) {
-		// TODO: Consistency check
-		numberToMap = input;
-		result = "";
+	String mapToRomanianNumber(int numberToMap) {
+		String result = "";
 
-		// Handle Zero Value
-		if (input == 0) {
+		if (numberToMap == 0) {
 			return result;
 		}
 
@@ -107,15 +101,14 @@ public class NumberMapper {
 	}
 
 	// maps an integer into a String in any numberToMap format with the base provided
-	String mapToBase(int input, int base) {
-		numberToMap = input;
-		result = "";
+	String mapToBase(int numberToMap, int base) {
+		String result = "";
 
 		int counter = 0;
-		int rest = input;
+		int rest = numberToMap;
 
 		// Handle Zero value
-		if (input == 0) {
+		if (numberToMap == 0) {
 			return "0";
 		}
 
@@ -135,17 +128,16 @@ public class NumberMapper {
 	}
 
 	// maps an integer input into a String in the Hexadecimal numbersystem
-	String mapToHexaDecimal(int input) {
+	String mapToHexaDecimal(int numberToMap) {
 		// Handle Zero value
-		if (input == 0) {
+		if (numberToMap == 0) {
 			return "0";
 		}
 
-		numberToMap = input;
-		result = "";
+		String result = "";
 
 		int counter = 0;
-		int rest = input;
+		int rest = numberToMap;
 
 		// calculaten needed counter
 		while (rest > 0) {

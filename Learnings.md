@@ -35,3 +35,7 @@ Im Schnitt kann ein Mensch ca. 7 Chunks auf einmal gut überblicken.
  - Variablen / Methoden typisieren
  - Struktur Higher Level Functions => Funktion die Funkionen aufruf/managed, aber keinen/kaum eigenen Code -> Code in verschiedene Abstraktionsebenen unterteilen - Single Responsibility Principle
  - DRY - Do not repeat yourself
+ - Globale Variablen wenn möglich vermeiden => Variablen sollten den kleinstmöglichen Scope haben
+ - Pure Functions (Funktionen die NUR von dein Eingabeparametern abhängig sind und NUR einen Wert zurückliefern und sonst nichts ändern)
+ - Accessability Modifer (Public/Private/...) so restriktiv wie möglich
+ - YAGNI - You aint gonna need it -> Nicht auf "Verdacht" implementieren, nur wenn echter Bedarf da ist
