@@ -7,13 +7,13 @@ public class NumberMapper {
 	}
 
 	public String mapTo(int numberToMap, String toType) {
-		if (!toType.equals("Romanian") && !toType.equals("Binary") && !toType.equals("Octal")
-				&& !toType.equals("Hexadecimal")) {
+		if (validateToType(toType)) {
 			return ERRORCODE.UNKNOWN_TARGET.toString();
 		}
-		if (numberToMap < 0) {
+		if (isNegative(numberToMap)) {
 			return ERRORCODE.NEGATIVE_NUMBER.toString();
 		}
+
 		if (toType.equalsIgnoreCase("Romanian")) {
 			return mapToRomanianNumber(numberToMap);
 		}
@@ -26,7 +26,17 @@ public class NumberMapper {
 		if (toType.equals("Hexadecimal")) {
 			return mapToHexaDecimal(numberToMap);
 		}
+		
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
+	}
+
+	private boolean isNegative(int numberToMap) {
+		return numberToMap < 0;
+	}
+
+	private boolean validateToType(String toType) {
+		return !toType.equals("Romanian") && !toType.equals("Binary") && !toType.equals("Octal")
+		&& !toType.equals("Hexadecimal");
 	}
 
 	// maps an integer into a String in the Romaniam numberToMap format
