@@ -13,14 +13,22 @@ public class NumberMapper {
 	}
 
 	public String mapTo(int numberToMap, String toType) {
-		if (validateToType(toType)) {
-			return ERRORCODE.UNKNOWN_TARGET.toString();
-		}
-		if (isNegative(numberToMap)) {
-			return ERRORCODE.NEGATIVE_NUMBER.toString();
+		try{
+			validate(numberToMap, toType);
+		}catch (Exception e){
+			return e.getMessage();
 		}
 
 		return doMapping(numberToMap, toType);
+	}
+
+	private void validate(int numberToMap, String toType) throws Exception{
+		if (validateToType(toType)) {
+			throw new Exception(ERRORCODE.UNKNOWN_TARGET.toString());
+		}
+		if (isNegative(numberToMap)) {
+			throw new Exception(ERRORCODE.NEGATIVE_NUMBER.toString());
+		}
 	}
 
 	private String doMapping(int numberToMap, String toType){
