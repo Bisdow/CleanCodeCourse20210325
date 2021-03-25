@@ -20,6 +20,10 @@ public class NumberMapper {
 			return ERRORCODE.NEGATIVE_NUMBER.toString();
 		}
 
+		return doMapping(numberToMap, toType);
+	}
+
+	private String doMapping(int numberToMap, String toType){
 		if (toType.equalsIgnoreCase(roman)) {
 			return mapToRomanNumber(numberToMap);
 		}
@@ -32,7 +36,6 @@ public class NumberMapper {
 		if (toType.equals(hexadecimal)) {
 			return mapToHexaDecimal(numberToMap);
 		}
-
 		return ERRORCODE.UNEXPECTED_ERROR.toString();
 	}
 
